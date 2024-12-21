@@ -1,6 +1,8 @@
 import Header from '../Components/Header';
 import Menu from '../Components/Menu';
 import BasePage from './BasePage';
+import Statuses from './Statuses';
+import Labels from './Labels';
 import Users from './Users';
 import LogIn from './LogIn';
 
@@ -12,6 +14,8 @@ export default class TaskManager extends BasePage {
     this.header = new Header(this.page);
     this.menu = new Menu(this.page);
     this.usersTab = new Users(this.page);
+    this.labelsTab = new Labels(this.page);
+    this.taskStatusesTab = new Statuses(this.page);
   }
 
   async logOut() {
