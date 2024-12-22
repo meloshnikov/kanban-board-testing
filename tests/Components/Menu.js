@@ -7,7 +7,7 @@ export default class Menu extends BasePage {
     this.tasksTab = this.page.getByRole('menuitem').filter({ hasText: 'Tasks' });
     this.usersTab = this.page.getByRole('menuitem').filter({ hasText: 'Users' });
     this.labelsTab = this.page.getByRole('menuitem').filter({ hasText: 'Labels' });
-    this.taskStatusesTab = this.page.getByRole('menuitem').filter({ hasText: 'Task statuses' });
+    this.statusesTab = this.page.getByRole('menuitem').filter({ hasText: 'Task statuses' });
   }
 
   async goToUsersTab() {
@@ -18,8 +18,8 @@ export default class Menu extends BasePage {
     await this.labelsTab.click();
   }
 
-  async goToTaskStatusesTab() {
-    await this.taskStatusesTab.click();
+  async goToStatusesTab() {
+    await this.statusesTab.click();
   }
 
   async goToTasksTab() {

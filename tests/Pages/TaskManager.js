@@ -4,6 +4,7 @@ import BasePage from './BasePage';
 import Statuses from './Statuses';
 import Labels from './Labels';
 import Users from './Users';
+import Tasks from './Tasks';
 import LogIn from './LogIn';
 
 export default class TaskManager extends BasePage {
@@ -15,7 +16,8 @@ export default class TaskManager extends BasePage {
     this.menu = new Menu(this.page);
     this.usersTab = new Users(this.page);
     this.labelsTab = new Labels(this.page);
-    this.taskStatusesTab = new Statuses(this.page);
+    this.statusesTab = new Statuses(this.page);
+    this.tasksTab = new Tasks(this.page);
   }
 
   async logOut() {
