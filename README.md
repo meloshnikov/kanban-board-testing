@@ -1,8 +1,40 @@
-# React + Vite
+<h2 align="center"> Kanban board testing project at Hexlet </h2>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+	<a href="https://github.com/meloshnikov/qa-auto-engineer-javascript-project-90/actions">
+		<img src="https://github.com/meloshnikov/qa-auto-engineer-javascript-project-90/actions/workflows/hexlet-check.yml/badge.svg" />
+	</a>
+  <a href="https://github.com/meloshnikov/qa-auto-engineer-javascript-project-90/actions">
+		<img src="https://github.com/meloshnikov/qa-auto-engineer-javascript-project-90/actions/workflows/playwright.yml/badge.svg" />
+	</a>
+  <a href="https://github.com/meloshnikov/qa-auto-engineer-javascript-project-90/actions">
+		<img src="https://github.com/meloshnikov/qa-auto-engineer-javascript-project-90/actions/workflows/tests-check.yml/badge.svg" />
+	</a>
+</div>
 
-Currently, two official plugins are available:
+Task Manager is a task management system that uses a flexible Kanban board to visualize workflow. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+E2E testing was performed using Playwright. The testing covers how the system provides CRUD to the following instances:
+
+* Users (to whom a specific task can be assigned).
+* Task statuses (e.g., 'Completed', 'In Progress', 'In Testing').
+* Task labels (e.g., 'Feature', 'Bug').
+* Tasks (represented as a Kanban board).
+
+## Installation
+>note: the current version of Kanban board was tested using Node.js v20.11.1
+* Clone this repository.
+* Install required dependencies:
+```
+make install
+```
+
+## How to run tests
+* Run Kanban board:
+```
+make start
+```
+* Run tests:
+```
+make test
+```

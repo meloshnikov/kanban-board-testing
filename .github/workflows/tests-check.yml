@@ -1,0 +1,49 @@
+name: tests-check
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+jobs:
+  build-and-ui-testing:
+    runs-on: ubuntu-latest
+    concurrency: ci-${{ github.ref }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    strategy:
+      matrix:
+        node-version: [ 20.x ]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Staring Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: install modules
+        run: make install
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: e2e testing
+        if: always()
+        run: make test
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+        if: always()
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        if: always()
+        with:
+          path: 'playwright-report'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        if: always()
+        uses: actions/deploy-pages@v1
