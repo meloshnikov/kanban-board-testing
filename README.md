@@ -1,14 +1,14 @@
 <h2 align="center"> Kanban board testing project at Hexlet </h2>
 
 <div align="center">
-	<a href="https://github.com/meloshnikov/qa-auto-engineer-javascript-project-90/actions">
-		<img src="https://github.com/meloshnikov/qa-auto-engineer-javascript-project-90/actions/workflows/hexlet-check.yml/badge.svg" />
+	<a href="https://github.com/meloshnikov/kanban-board-testing/actions">
+		<img src="https://github.com/meloshnikov/kanban-board-testing/actions/workflows/hexlet-check.yml/badge.svg" />
 	</a>
-  <a href="https://github.com/meloshnikov/qa-auto-engineer-javascript-project-90/actions">
-		<img src="https://github.com/meloshnikov/qa-auto-engineer-javascript-project-90/actions/workflows/playwright.yml/badge.svg" />
+  <a href="https://github.com/meloshnikov/kanban-board-testing/actions">
+		<img src="https://github.com/meloshnikov/kanban-board-testing/actions/workflows/playwright.yml/badge.svg" />
 	</a>
-  <a href="https://github.com/meloshnikov/qa-auto-engineer-javascript-project-90/actions">
-		<img src="https://github.com/meloshnikov/qa-auto-engineer-javascript-project-90/actions/workflows/tests-check.yml/badge.svg" />
+  <a href="https://github.com/meloshnikov/kanban-board-testing/actions">
+		<img src="https://github.com/meloshnikov/kanban-board-testing/actions/workflows/github-pages.yml/badge.svg" />
 	</a>
 </div>
 
